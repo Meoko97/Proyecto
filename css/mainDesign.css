@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Barlow', sans-serif;
+    background-color: #FCFCFC;
+}
+
+/* Menu */
+
+.menuContainer{
+    background-color: #A8C1DE;
+    position: fixed;
+    width: 100%;
+    border-radius: 2px;
+    box-shadow: 0 10px 15px -10px rgb(49, 76, 110), 0 1px 4px rgba(49, 76, 110, 0.46), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    min-height: 42px;
+}
+
+#menu{
+    list-style: none;
+    padding: 15px 0px;
+    margin: auto;
+    text-align: center;
+    width: 80vw;
+}
+
+#menu li{
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+#menu li a{
+    font: menu;
+    text-decoration: none;
+    font-size: 20;
+    color: #000;
+}
+
+#menu li:hover a{
+    color: #363636;
+}
+
+#logoMenu{
+    height:50;
+    min-width: 50;
+    float: left;
+    padding: 5px 15;
+    box-sizing: content-box;
+}
+/*Fin del menu*/
+
+/*Banner*/
+
+header{
+    background-color: #FCFCFC;
+}
+
+#logo{
+    padding: 75px 200px 20px;
+    width: 100vw;
+}
+
+/*Fin del Banner*/
+
+/*About*/
+.container{
+    width: 100%;
+}
+
+.about{
+    box-shadow: 0px 0.5px 4px 0px rgba(49, 50, 50, 0.75);
+    width: 80%;
+    margin: auto;
+    min-height: 450px;
+    background-color: #fff;
+    padding: 0 40px;
+
+}
+
+.column-left{
+    float: left;
+    width: 50%;
+}
+
+.column-right{
+    float: right;
+    width: 50%;
+}
+
+.unaColumna{
+    width: 75%;
+    margin: auto;
+}
+
+.juntarColumn{
+    padding-top: 18%;
+    padding-left: 12.5%;
+    position:static;
+    width: 87.5%;
+}
+
+.article{
+    padding: 45px 0 70px 0;
+}
+
+.section{
+    padding-top: 25px;
+}
+
+.tituloArticulo{
+    color: #3366cc;
+}
+
+.tituloEnum{
+    color:#3366CC;
+    font-size: 18;
+    font-weight: bold;
+}
+
+#circulares{
+    text-align: center;
+    padding: 45px 0px 0;
+}
+
+#circulares a{
+    text-decoration: none;
+    color: #000;
+    font-size: 26;
+    border: 1px solid #000;
+    padding: 6px;
+    border-radius: 2.5px;
+    margin: 0 10px;
+}
+
+/*Fin About*/
+
+/*Formularios*/
+
+.formMargenes{
+    padding: 42px 0;
+}
+
+.formTitle{
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+
+/*Inscripcion*/
+
+.formInscripcion{
+    width: 480px;
+    margin: auto;
+    min-height: 400px;
+    background: rgba(167,192,221,0.9);
+    padding: 20px;
+    border: 1px solid rgba(167,192,221,1);
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.formInscripcion input{
+    padding: 7px;
+    margin-bottom: 13px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+#tipoClienteTitle{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.tipoCliente{
+    width: 100%;
+    padding: 2px;
+    display: inline-block
+}
+
+.precioInscripcion{
+    float: right;
+    padding-right: 10px;
+}
+
+input[type=radio]{
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+}
+
+.tipoCliente label{
+    padding-left: 5px;
+    font-size: 20;
+    cursor: pointer;
+}
+#btnInscripcion{
+    width: 100%;
+    border: 0px;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.4);
+    color: rgba(255,255,255,0.9);
+}
+
+#btnInscripcion:hover{
+    cursor: pointer;
+}
+
+/*Fin de Inscripcion*/
+
+/*Becas*/
+
+.ActDesBecas{
+    padding:5px 0px 0px 15px;
+}
+
+#becas{
+    font-size: 15px
+}
+.divBecas{
+    width: 100%;
+    margin: auto;
+    min-height: 200px;
+    padding:5px 20px 7px 20px;
+}
+
+.divBecas h1{
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+
+.tipoEstudiante label{
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.datosSupervisor input{
+    width: 100%;
+}
+
+/*Fin de Becas*/
+
+    /*Contacto*/
+
+
+.formContacto{
+    width: 480px;
+    min-height: 430px;
+    margin: auto;
+    background: rgba(167,192,221,0.9);
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(126,174,131,0.3);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.formContacto input, textarea{
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 13px;
+    border-radius: 4px;
+    border: 0;
+    font-size: 15px;
+    background: rgba(252,252,252,1);
+}
+
+.formContacto textarea{
+    min-height: 150px;
+    max-height: 290px;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+#btnContacto{
+    background: rgba(0,0,0,0.4);
+    border: 0;
+    border-radius: 5px;
+    color: rgba(255,255,255,0.9);
+}
+
+#btnContacto:hover{
+    cursor: pointer;
+}
+
+
+
+
+/*Footer*/
+
+footer{
+    height: 100px;
+    width: 100%;
+    display: block;
+    text-align: center; 
+    padding: 15px 0 5px 0;
+}
+
+footer img{
+    margin: 0 10px;
+}
+
+/*Fin Footer*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

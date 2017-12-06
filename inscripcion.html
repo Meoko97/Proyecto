@@ -1,0 +1,148 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Symposium</title>
+<link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+<link href="css/mainDesign.css" rel="stylesheet" type="text/css">
+        
+<script type="text/javascript">
+    function showContent() {
+        contentBecas = document.getElementById("contentBecas");
+        contentCheckBecas = document.getElementById("contentCheckBecas");
+        mostrarBecas = document.getElementById("mostrarBecas");
+        mostrarCheckBecas = document.getElementById("mostrarCheckBecas");
+        
+        if(mostrarCheckBecas.value == "1"){
+            contentCheckBecas.style.display='block';
+            if(mostrarBecas.checked){
+                contentBecas.style.display='block';
+            }
+            else{
+                contentBecas.style.display='none';
+            }
+        }
+        else if(mostrarCheckBecas.value != "1"){
+            contentCheckBecas.style.display='none';
+        }
+    }
+</script>
+
+    
+</head>
+
+<body>
+	   <nav class="menuContainer">
+            <a href="index.html"><img id="logoMenu" src="images/Logotipo-menu.png"></a>
+			<ul id="menu">
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="comites.html">Comités</a></li>
+				<li><a href="circulares.html">Circulares</a></li>
+				<li><a href="inscripcion.html">Incripción</a></li>
+				<li><a href="alojamiento.html">Alojamiento</a></li>
+				<li><a href="turismo.html">Turismo</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+			</ul>
+		</nav>
+    <div class="container" style="padding-top: 7%">
+  		<div class="about" style="min-height: 75%">
+            <div class="formMargenes">
+                <form class="formInscripcion">
+                    <div class="formTitle">
+                        <h1>Inscripción</h1>
+                        <p>Aquí podrá inscribirse al congreso y los estudiantes podrán solicitar una beca.</p>
+                    </div>
+                    <input type="text" name="nombre" placeholder="Nombre" style="width: 39.87%">
+                    <input type="text" name="apellidos" placeholder="Apellidos" style="width: 57.12% ;margin-left: 10px">
+                    <input type="text" name="dni" placeholder="DNI/Pasaporte" style="width: 39.87%">
+                    <input type="text" name="institucion" placeholder="Institucion" style="width: 57.12%; margin-left: 10px">
+                    <label>Fecha de nacimiento</label>
+                    <div style="margin-top: 7px">
+                        <input type="text" name="day" placeholder="Día" style="width: 15%">
+                        <span style="margin: 0 5px"><input type="text" name="month" placeholder="Mes" style="width: 30%"></span>
+                        <input type="text" name="year" placeholder="Año" style="width: 20%">
+                    </div>
+                    <input name="direccion" placeholder="Dirección" style="width: 100%">
+                    <input name="CPostal" placeholder="Código postal" style="width: 30%">
+                    <input name="ciudad" placeholder="Ciudad" style="width: 66.99%; margin-left: 10px">
+                    <input name="pais" placeholder="País" style="width: 40%">
+                    <input name="telefono" placeholder="Teléfono" style="width: 56.9%; margin-left: 10px">
+                    <input name="email" placeholder="Correo Electrónico" style="width: 100%">
+                    <label id="tipoClienteTitle">Seleccione su ocupación:</label>
+                    <div style="margin: 10 0 15">
+                        <div class="tipoCliente">
+                            <label>
+                                <input type="radio" name="tipoCliente" value="0">
+                                Investigador
+                                <div class="precioInscripcion">
+                                    220€
+                                </div>
+                            </label>
+                        </div>
+                        <div class="tipoCliente">
+                            <label>
+                                <input type="radio" name="tipoCliente" value="1" id="mostrarCheckBecas" onchange="javascript:showContent()"> 
+                                Estudiante
+                                <div class="precioInscripcion">
+                                    120€
+                                </div>
+                            </label>
+                            <div class="ActDesBecas" id="contentCheckBecas" style="display: none">
+                                <label id="becas">
+                                    <input type="checkbox" name="ActDesBeca" id="mostrarBecas" value="1" onchange="javascript:showContent()">
+                                    ¿Quieres solicitar beca?
+                                </label>
+                            </div>
+                            <div class="divBecas" id="contentBecas" style="display: none">
+                                <h1>Solicitud de Beca</h1>
+                                <div class="tipoEstudiante">
+                                    <label>
+                                        <input type="radio" name="tipoEstudiante">
+                                        Estudiante de Grado
+                                    </label>
+                                </div>
+                                <div class="tipoEstudiante">
+                                    <label>
+                                        <input type="radio" name="tipoEstudiante">
+                                        Estudiante de Pos-Grado
+                                    </label>
+                                </div>
+                                <div class="tipoEstudiante">
+                                    <label>
+                                        <input type="radio" name="tipoEstudiante">
+                                        Estudiante de Doctorado
+                                    </label>
+                                </div>
+                                <div class="datosSupervisor" style="margin-top: 10px">
+                                    <input type="text" placeholder="Nombre del Supervisor">
+                                    <input type="text" placeholder="Apellidos del Supervisor">
+                                    <input type="text" placeholder="Cargo del Supervisor">
+                                    <input type="text" placeholder="Email del Supervisor">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tipoCliente">
+                            <label>
+                                <input type="radio" name="tipoCliente" value="2">
+                                Acompañante 
+                                <div class="precioInscripcion">
+                                    120€
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <input id="btnInscripcion" type="button" value="Enviar">
+                </form>
+            </div>
+		</div>
+		<footer>
+    		<a href="http://cms.ual.es/UAL/universidad/centros/cienciasexperimentales/index.htm"><img src="images/Logo_UAL_CCEE.png" width="80" height="59" alt=""/></a>
+			<a href="http://www.ual.es/"><img src="images/Ual.png" width="157" height="57" alt=""/></a> 
+			<a href="http://www.cajamar.es/"><img src="images/cajamar.png" width="200" height="40" alt=""/> </a>
+			<a href="http://www.geqor.es/"><img src="images/Logo_RSEQ.png" width="83" height="59" alt=""/></a>
+			<a href="http://www.juntadeandalucia.es/"><img src="images/Junta_Andalucia.png" width="83" height="59" alt=""/></a>
+		</footer>
+</div>
+</body>
+</html>
